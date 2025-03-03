@@ -3,8 +3,8 @@ FROM gcc:latest
 WORKDIR /app
 
 # Copy all files explicitly
-COPY server.c .
-COPY client.c .
+COPY Server.c .
+COPY Client.c .
 
 # Debug - list files to verify they exist
 RUN ls -la
