@@ -10,7 +10,7 @@ COPY Client.c .
 RUN ls -la
 
 # Compile the server
-RUN gcc -o Server Server.c -Wall
+RUN gcc -o server Server.c -Wall
 
 # Expose the port the server runs on
 EXPOSE 8080
