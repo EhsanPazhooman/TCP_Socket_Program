@@ -2,10 +2,15 @@ FROM gcc:latest
 
 WORKDIR /app
 
-COPY . .
+# Copy all files explicitly
+COPY server.c .
+COPY client.c .
+
+# Debug - list files to verify they exist
+RUN ls -la
 
 # Compile the server
-RUN gcc -o server server.c
+RUN gcc -o server server.c -Wall
 
 # Expose the port the server runs on
 EXPOSE 8080
